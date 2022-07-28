@@ -7,6 +7,9 @@ namespace AddressBookSystem
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to AddressBook System Problem");
+
+            //Add new Contacts
+            AddressBook.AddNewContact();
         }
     }
 }
