@@ -8,8 +8,26 @@ namespace AddressBookSystem
         {
             Console.WriteLine("Welcome to AddressBook System Problem");
 
-            //Add new Contacts
-            AddressBook.AddNewContact();
+            while (true)
+            {
+                Console.WriteLine("\nEnter 1 \tAdd New Contact ");
+                Console.WriteLine("\nEnter 2 \tEdit Existing Contact");
+
+                int choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        AddressBook.AddNewContact(); //Adding the new contact
+                        break;
+                    case 2:
+                        AddressBook.EditExistingContact(); //Edit existing contact
+                        break;
+                    default:
+                        Console.WriteLine("Pleasee select valid input");
+                        break;
+                }
+            }
         }
     }
 }
