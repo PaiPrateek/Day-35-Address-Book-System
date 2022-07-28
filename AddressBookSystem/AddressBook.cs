@@ -10,6 +10,9 @@ namespace AddressBookSystem
     {
         public static Contact person = new Contact();
 
+        // Creating list for Storing the Contacts of Each Persons details
+        public static List<Contact> AddressDetails = new List<Contact>();
+
         // /Creating the method for Adding new contact
         public static void AddNewContact()
         {
@@ -40,6 +43,8 @@ namespace AddressBookSystem
             Console.WriteLine("\n************************************\n");
             PrintContact(person);
             Console.WriteLine("\n************************************\n");
+
+            AddressDetails.Add(person);
         }
 
         // Display the Person Details
