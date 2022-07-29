@@ -8,7 +8,7 @@ namespace AddressBookSystem
 {
     public class AddressBook
     {
-        public static Contact person = new Contact();
+       
 
         // Creating list for Storing the Contacts of Each Persons details
         public static List<Contact> AddressDetails = new List<Contact>();
@@ -16,6 +16,8 @@ namespace AddressBookSystem
         // /Creating the method for Adding new contact
         public static void AddNewContact()
         {
+            Contact person = new Contact();
+
             Console.Write("Enter First Name: ");
             person.FirstName = Console.ReadLine();
 
@@ -176,6 +178,19 @@ namespace AddressBookSystem
 
             Console.WriteLine("\nPress any key to continue.");
             Console.ReadKey();
+        }
+        //Sort Persons Name for given city
+        public static void SortPersonsANmeByCity()
+        {
+            Console.WriteLine("Please enter the city name: ");
+            string city = Console.ReadLine();
+            var SortPersonDetails = AddressDetails.FindAll(C => (C.City == city)).OrderBy(F => F.FirstName).ToList();
+            Console.WriteLine("All the entrier in AddressBook Sorted Alphabetically :");
+            foreach(var contact in SortPersonDetails)
+            {
+                Console.WriteLine("\nPerson Name : " + contact.FirstName + 
+                                    "\tCity : " + contact.City);
+            }
         }
     }
 }
