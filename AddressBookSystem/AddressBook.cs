@@ -254,5 +254,7 @@ namespace AddressBookSystem
         }
 
         //Drawing ER Diagram 
+
+        //Ensure all retrieve queries are working with new table strature
     }
 }
