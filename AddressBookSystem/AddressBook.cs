@@ -13,7 +13,8 @@ namespace AddressBookSystem
         // Creating list for Storing the Contacts of Each Persons details
         public static List<Contact> AddressDetails = new List<Contact>();
 
-        // /Creating the method for Adding new contact
+        // /Creating the method for Adding new contact - Added AddressBookName and AddressBook Type
+
         public static void AddNewContact()
         {
             Contact person = new Contact();
@@ -42,6 +43,12 @@ namespace AddressBookSystem
             Console.Write("Enter E-Mail: ");
             person.Email = Console.ReadLine();
 
+            Console.Write("Enter AddressBook Name: ");
+            person.AddressBookName = Console.ReadLine();
+
+            Console.Write("Enter AddressBook Type: ");
+            person.AddressBookType = Console.ReadLine();
+
             Console.WriteLine("\n************************************\n");
             PrintContact(person);
             Console.WriteLine("\n************************************\n");
@@ -60,6 +67,8 @@ namespace AddressBookSystem
             Console.WriteLine("Zip Code :" + person.ZipCode);
             Console.WriteLine("Mobile Number :" + person.MobileNumber);
             Console.WriteLine("E-Mail :" + person.Email);
+            Console.WriteLine("E-Mail :" + person.AddressBookName);
+            Console.WriteLine("E-Mail :" + person.AddressBookType);
         }
         // Creating the method for editing the existing contact
         public static void EditExistingContact()
